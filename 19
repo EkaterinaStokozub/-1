@@ -1,0 +1,32 @@
+//Найти количество делителей каждого из целых чисел от 120 до 140.
+using System;
+
+namespace ConsoleApp24
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 120;
+            int x = 120;
+            int b = 140;
+            int i = 1;
+            int count = 0;
+            int m = 0;
+            for (x = 120, b = 140; x<=b; x++)
+            {
+                for (a = 120 + m, i = 1; a > 0; a--)
+                {
+                    if (a % i == 0)
+                    {
+                        count++;
+                    }
+                    i++;
+                }
+                i = 1;
+                m++;
+            }
+            Console.WriteLine($"Количество делителей каждого из целых чисел от 120 до 140 равно {count}.");
+        }
+    }
+}
