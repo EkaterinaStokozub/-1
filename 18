@@ -1,0 +1,23 @@
+//В строке удалить символ точку (.) и подсчитать количество удаленных символов.
+using System;
+
+namespace ConsoleApp23
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string first = Convert.ToString(Console.ReadLine());
+            int x = 0;
+            for (int i = 0; i < first.Length; i++)
+            {
+                if (first[i] == '.')
+                {
+                    x++;
+                }
+            }
+            Console.WriteLine(first.Remove('.'));
+            Console.WriteLine(x);
+        }
+    }
+}
