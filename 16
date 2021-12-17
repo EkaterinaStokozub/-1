@@ -1,0 +1,24 @@
+//В строке заменить все двоеточия (:) знаком процента (%). Подсчитать количество замен.
+using System;
+
+namespace ConsoleApp21
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = Convert.ToString(Console.ReadLine());
+            int count = 0;
+
+            for (int i = 0; i < a.Lenght; i++)
+            {
+                if (a[i] == ':')
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine(a.Replace(':', '%'));
+            Console.WriteLine(count);
+        }
+    }
+}
