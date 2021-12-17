@@ -1,0 +1,35 @@
+//Дан одномерный массив из 10 целых чисел. Вывести пары отрицательных чисел, стоящих рядом.
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 10;
+            int[] gg = new int[n];
+            int i = 0;
+            int[] ff = new int[20];
+            Console.WriteLine("Введите элемент массива: ");
+            gg[i] = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            i++;
+            int x = 0;
+            while (i < n)
+            {
+                Console.WriteLine("Введите элемент массива: ");
+                gg[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+                i++;
+            }
+            for (x = 0; x < 9; x++)
+            {
+                if (gg[x] < 0 && gg[x + 1] < 0)
+                {
+                    Console.WriteLine(gg[x] + " " + gg[x + 1]);
+                }
+            }
+        }
+    }
+}
