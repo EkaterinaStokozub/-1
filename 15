@@ -1,0 +1,24 @@
+//Дана строка, содержащая русскоязычный текст. Найти количество слов, начинающихся с буквы "о".
+using System;
+
+namespace ConsoleApp20
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string text = "Карусель Обида цветок одно";
+
+            int counter = 0;
+
+            foreach (string word in text.ToLower().Split(" "))
+            {
+                if (word.StartsWith("о"))
+                {
+                    counter++;
+                }
+            }
+            Console.WriteLine($"Количество слов, которые начинаются с \"о\": {counter}");
+        }
+    }
+}
