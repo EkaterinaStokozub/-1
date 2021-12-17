@@ -1,0 +1,40 @@
+//Дан целочисленный массив размера 10. Создать новый массив, удалив все одинаковые элементы, оставив их 1 раз.
+using System;
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 10;
+            int[] gg = new int[n];
+            int i = 0;
+            int[] ff = new int[n];
+            int d = 0;
+            while (i < n)
+            {
+                Console.WriteLine("Введите элемент массива: ");
+                gg[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+                i++;
+            }
+            for (n = 0; n!=10; n++)
+            {
+                for (int l = 0; l!=10; l++)
+                {
+                    if (gg[l] != gg[n])
+                    {
+                        ff[d] = gg[n];
+                        d++;
+                    }
+                }
+            }
+            for (int m = 0; m < d; m++)
+            {
+                Console.WriteLine(ff[m]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
