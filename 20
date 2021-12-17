@@ -1,0 +1,41 @@
+//Составить программу для графического изображения делимости чисел от 1 до n (значение n вводится с клавиатуры).
+//В каждой строке надо напечатать очередное число и столько символов «+», сколько делителей у этого числа.
+//Например, если n = 4, то на экране должно быть напечатано:
+//1+
+//2++
+//3++
+//4+++
+using System;
+
+namespace ConsoleApp25
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 1;
+            int x = 1;
+            int m = 0;
+            int i = 1;
+            Console.Write("Введите число: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+            for (a = 1; a<=b; a++)
+            {
+                for (x = 1 + m; x <= 1; x--)
+                {
+                    if (x%i == 0)
+                    {
+                        count++;
+                    }
+                    i++;
+                }
+                string s = new string('+', count);
+                Console.WriteLine(a + s);
+                i = 1;
+                m++;
+                count = 0;
+            }
+        }
+    }
+}
